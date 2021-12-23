@@ -12,7 +12,7 @@ export class AccountMongoRepository implements AddAccountRepository {
     const accountById = await accountCollection.findOne({ _id: id })
 
     const account = MongoHelper.map(accountById)
-
+    console.log(account)
     return account
   }
 }
